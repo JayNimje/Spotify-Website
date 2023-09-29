@@ -1,0 +1,364 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    
+    height: 100vh; /* Allow .main-content to take up remaining vertical space */
+    padding: 0.5rem;
+}
+.sidebar{
+    background-color: black;
+    max-width:340px;
+    border-radius: 1rem; /* 1 rem = 16px */ 
+    margin: 1rem;
+    overflow: scroll;
+    
+
+
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 2px; 
+    
+}
+.main-content{
+    background-color:#121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+
+
+}
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    height: 72px;
+    width: 100%;
+
+}
+.nav-option img{
+    height: 1.3rem;
+    width: 1.3rem;
+    
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.8;
+    padding: 0.5rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option a{
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+.icons img{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 1rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    
+}
+.icons{
+    display: flex;
+}
+.lib-option img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.box{
+    background-color: #232323;
+    height: 10rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 1rem 1.75rem 1rem;
+    padding: 0.75rem 1rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+/* ******************************************Below Section is for Main Content************************************ ************/
+.sticky-nav{
+    position: sticky;
+    top:0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+.sticky-nav-options{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+    
+.sticky-nav-options img {
+    height: 2.1rem;
+    width: 2.1rem;
+
+}
+.sticky-nav-icons{
+    margin-left: 1rem;
+}
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+@media (max-width:1000px){  
+    .hide{
+        display: none;
+    }
+
+}
+.card{
+    background-color: #232323;
+    width: 150px ;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem ;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card-img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+.music-player{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.album{
+    width: 25%;
+    display: flex;
+    
+    
+}
+.player{
+    width: 50%;
+    
+}
+.controls{
+    width: 25%;
+   
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right: 2rem;
+    opacity: 0.7;
+}
+.player-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width:70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 100%;
+    margin-top: -6px;
+}
+.album{
+    max-height: 100%;
+}
+#smallcard{
+    width: 5rem;
+    height: 100%rem;
+    margin-left: 1rem;
+}
+.subalbum1{
+    display: flex;
+    
+}
+.subalbum2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.subalbum2 h5{
+    margin: 0;
+    margin-top: 1rem;
+}
+.subalbum2 h6{
+    margin: 0;
+}
+.subalbum3{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+#heart{
+    height: 2rem;
+    width: 2rem;
+    opacity: 0.7;
+   
+}
+#heart:hover{
+    opacity: 1;
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.control-icons{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 1rem;
+    opacity: 0.7;
+}
+.control-icons:hover{
+    opacity: 1;
+}
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+    .sidebar {
+        max-width: 100%;
+        overflow: hidden;
+        display: none;
+    }
+    body {
+        overflow-y: auto; /* Enable scrolling for the entire page */
+    }
+    .main-content {
+        
+        max-width: 100%;
+        flex: 1;
+        padding: 1rem; /* Add padding to the main content */
+        overflow-y: auto; /* Enable scrolling for the main content */
+    }
+    #heart{
+        display: none;
+    }
+    
+    .controls {
+        display: none;
+    }
+    .player{
+        margin-right: 2rem;
+    }
+    
+}
+@media (max-width: 520px){
+    .playback-bar{
+        display: none;
+    }
+    .player-control-icon{
+        display: none;
+    }
+    #res-icon {
+        display: block;
+        max-width: 100%; 
+        margin-left: auto;
+    }
+    
+
+    
+    
+}
+
+
