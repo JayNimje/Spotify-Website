@@ -315,6 +315,7 @@ a {
 @media (max-width: 800px) {
     .main {
         flex-direction: column;
+        padding-top: 0;
     }
     .sidebar {
         max-width: 100%;
@@ -330,6 +331,7 @@ a {
         flex: 1;
         padding: 1rem; /* Add padding to the main content */
         overflow-y: auto; /* Enable scrolling for the main content */
+        padding-top: 0;
     }
     #heart{
         display: none;
